@@ -1,33 +1,13 @@
 version: 0.2
-
-env:
-  variables:
-    key: "value"
-    key: "value"
-  parameter-store:
-    key: "value"
-    key: "value"
-            
 phases:
-  install:
-    commands:
-      - command
-      - command
-  pre_build:
-    commands:
-      - command
-      - command
   build:
     commands:
-      - command
-      - command
+      - echo Build started on `date`
+      - echo Compiling the Python code...
+      - python HelloWorld_tst.py
   post_build:
     commands:
-      - command
-      - command
+      - echo Build completed on `date`
 artifacts:
   files:
-    - location
-    - location
-  discard-paths: yes
-  base-directory: location
+    - HelloWorld.py
